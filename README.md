@@ -34,4 +34,4 @@ Description of project:
 
 Deployed Link on Heroku:
 
-https://jb-note-taker-app.herokuapp.com/notes
+https://jb-note-taker-app.herokuapp.com
