@@ -4,22 +4,29 @@ const content = require("../db/db.json");
 module.exports = function(app) {
     
     app.get('/api/notes', function(req, res) {
-        res.json(JSON.stringify(content));
+        res.json(content);
       });
-
+    
     app.post('/api/notes', function(req, res) {
         let newContent = req.body;
-        let newId = (data.length).toString();
+        let newId = content.length
         newContent.id = newId;
-        data.push(newContent);
+        content.push(newContent);
 
-        fs.writeFileSync("./db/db.json", JSON.stringify(data), function(err) {
+        fs.writeFileSync("./db/db.json", JSON.stringify(content), function(err) {
             if (err) throw (err);
         });
 
-        res.json(data);
+        res.json("ok");
     });
 
-    
+    app.delete('/api/notes/:id', function(req, res) {
+        let deleteContent = content.find(({id}) => id === JSON.parse(req.params.id));
+        content.splice(content.indexOf(deleteContent), 1);
+        fs.writeFile("./db/db.json", JSON.stringify(content), function(err) {
+            if (err) throw (err);
+            res.json("Note Deleted");
+        });
+    });
     
     }
