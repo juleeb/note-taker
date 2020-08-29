@@ -5,13 +5,13 @@ Application to take note.
 
 Image preview:
 
-Commandline Instruction
+Index page
 
-<img src="image/command.gif" width="600" height="300">
+<img src="image/home.png" width="600" height="300">
 
-Final Page 
+Note Page 
 
-<img src="image/mainpage.png" width="500" height="300">
+<img src="image/note.png" width="600" height="300">
 
 Description of project:
 
@@ -34,4 +34,4 @@ Description of project:
 
 Deployed Link on Heroku:
 
-https://juleeb.github.io/team-profile/
+https://jb-note-taker-app.herokuapp.com/notes
